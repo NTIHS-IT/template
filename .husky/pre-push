@@ -2,7 +2,8 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run build
-giturl = $(git remote get-url origin)
+giturl=$(git remote get-url origin)
+echo "$giturl"
 cd dist
 git init
 git status

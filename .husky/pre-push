@@ -2,11 +2,10 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm run build
+giturl = $(git remote get-url origin)
 cd dist
 git init
 git status
-# 記得改git
-giturl = $(git remote get-url origin)
 git remote add gh-pages $giturl
 git checkout -b gh-pages
 git add --all
